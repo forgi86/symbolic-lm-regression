@@ -10,11 +10,11 @@ x, y = df['x'], df['y']
 # --- AGENT MODIFIES ONLY THIS SECTION ---
 # Hint: Here we assime a quadratic relationship, but this is just a guess.
 # You may try different functions to minimize MSE.
-def regression_fn(x, a, b, c):
-    return a * np.sin(b * x + c)
+def func(x, a, b, c):
+    return a * x**2 + b * x + c
 
-popt, _ = curve_fit(regression_fn, x, y)
-y_pred = regression_fn(x, *popt)
+popt, _ = curve_fit(func, x, y)
+y_pred = func(x, *popt)
 # ---------------------------------------
 
 mse = mean_squared_error(y, y_pred)
