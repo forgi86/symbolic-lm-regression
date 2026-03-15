@@ -1,4 +1,4 @@
-# Symbolic Learning with LLMs
+# Symbolic Regression with LLMs
 
 A toy autonomous research loop for symbolic regression. The agent utilizes **Qwen 3.5 (9B)** to iteratively refine the model structure using a greedy "ratchet" logic to converge on the lowest Mean Squared Error (MSE).
 
