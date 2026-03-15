@@ -105,9 +105,9 @@ for i in range(ITERATIONS):
     if current_code:
         prompt += f"Current Code in {TARGET_FILE}:\n```python\n{current_code}\n```\n"
     
-    prompt += ("You MUST only modify function regression_fn (e.g., try sinusoids, exponentials, other polynomials....) "
+    prompt += ("You can ONLY modify function regression_fn (e.g., try other polynomials, exponentials, logarithmic, trigonometric, ....) "
                "Do NOT change the structure of the code outside of that function."
-               "Try a function at a time to isolate effects."
+               "Do NOT try different functions in the same iteration."
                "The objective is to minimize MSE"
         )
     

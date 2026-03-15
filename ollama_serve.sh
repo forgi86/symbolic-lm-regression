@@ -1,0 +1,3 @@
+export OLLAMA_CONTEXT_LENGTH=16384
+export OLLAMA_KEEP_ALIVE=10m
+ollama serve
