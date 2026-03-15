@@ -8,7 +8,7 @@ A toy autonomous research loop for symbolic regression. The agent utilizes **Qwe
 
 At each iteration, the agent modifies `train.py`. If the MSE decreases, the change is kept; otherwise, it is reverted. 
 
-Currently, the agent is instructed to only modify the regression function `regression_fn`, though the scope of modification may be expanded in future iterations to include optimization hyperparameters or data preprocessing steps.
+Currently, the agent is instructed to only modify the regression function `regression_fn`. The scope of modification may be expanded in future iterations to include optimization hyperparameters or data preprocessing steps.
 
 ---
 
