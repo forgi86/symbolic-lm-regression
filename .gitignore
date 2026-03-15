@@ -2,3 +2,5 @@
 old
 .venv
 train.py
+train_candidate.py
+log/*

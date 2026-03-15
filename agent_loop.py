@@ -62,6 +62,8 @@ def evaluate(filename="train.py"):
 TEMPLATE_FILE = "train_template.py"
 TARGET_FILE = "train.py"
 ITERATIONS = 5
+ARCHIVE_DIR = "log"
+os.makedirs(ARCHIVE_DIR, exist_ok=True)
 
 # 0. Initialize Workspace
 if not os.path.exists(TEMPLATE_FILE):
@@ -92,7 +94,8 @@ best_code = ""
 
 # Start the Loop
 for i in range(ITERATIONS):
-    print(f"\n--- Iteration {i+1} ---")
+    idx = i + 1
+    print(f"\n--- Iteration {idx} ---")
     
     # Read current state of the code to show the agent its 'Old Code'
     current_code = ""
@@ -120,13 +123,17 @@ for i in range(ITERATIONS):
     # 2. Extract code from Markdown
     code_match = re.search(r'```python\n(.*?)\n```', response, re.DOTALL)
     new_hypothetical_code = code_match.group(1) if code_match else response
-    
+
+    iteration_filename = os.path.join(ARCHIVE_DIR, f"train_{idx:03d}.py")
+    with open(iteration_filename, "w") as f:
+        f.write(new_hypothetical_code)
+
     # 3. Apply change and Evaluate
     # We use a temporary file to evaluate before committing to the 'best' state
-    with open("temp_candidate.py", "w") as f:
+    with open("train_candidate.py", "w") as f:
         f.write(new_hypothetical_code)
     
-    current_mse = evaluate("temp_candidate.py")
+    current_mse = evaluate("train_candidate.py")
     print(f"Candidate MSE: {current_mse}")
 
     # 4. The Ratchet (Logic for keeping/reverting)
