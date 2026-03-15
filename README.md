@@ -1,6 +1,6 @@
 # Symbolic Regression with LLMs
 
-A toy autonomous research loop for symbolic regression. The agent utilizes a local **Qwen 3.5 (9B)** LM (installed through Ollama) to iteratively refine `train.py` using a greedy "ratchet" logic to lower the Mean Squared Error (MSE).
+A toy autonomous research loop for symbolic regression. The agent utilizes a local **Qwen 3.5 (9B)** language model (installed through Ollama) to iteratively refine `train.py` using a greedy "ratchet" logic to lower the Mean Squared Error (MSE).
 
 ---
 
