@@ -1,4 +1,4 @@
-# Symbolic Regression with LLMs
+# Symbolic Regression with Language Models
 
 A toy autonomous research loop for symbolic regression. The agent utilizes **Qwen 3.5 (9B)** language model running locally to iteratively refine `train.py`. Just one goal - lower the Mean Squared Error!
 
