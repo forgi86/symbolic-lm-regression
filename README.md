@@ -68,5 +68,3 @@ symbolic-learning-agent/
 ├── README.md               # Project documentation and setup instructions
 └── log/                    # Generated candidates (train_001.py, train_002.py, etc.)
 ```
-python agent_loop.py
-```
