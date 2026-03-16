@@ -12,7 +12,7 @@ This is my first experiment with agents and it is heavily vibe-coded. Forgive me
 
 ### 🚀 Rules of the Game
 
-At each iteration, the agent edits `train.py`. Currently, it is instructed to only change the regressor function `regression_fn`. In the template, it is quadratic:
+At each iteration, the agent edits `train.py`. Currently, it is instructed to only change the regressor function `regression_fn`. In ``train_template.py``, it is quadratic:
 
 ```python
 def regression_fn(x, a, b, c):
