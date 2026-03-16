@@ -23,3 +23,26 @@ symbolic-learning-agent/
 ├── train.py                # The currently best performing training script
 ├── README.md               # Project documentation and setup instructions
 └── log/                    # Generated candidates (train_001.py, train_002.py, etc.)
+```
+
+---
+
+### 🧪 Usage
+
+1. Start the Ollama server (in a separate terminal):
+
+```bash
+ollama serve
+```
+
+2. Pull / run the local model (in another terminal):
+
+```bash
+ollama run qwen2.5:9b
+```
+
+3. Run the agent loop:
+
+```bash
+python agent_loop.py
+```
